@@ -21,8 +21,9 @@ def preview():
     now = str(datetime.datetime.now())
     now = now.replace(":", "")
     now = now.replace(".", "")
+    now = now.replace(" ", "-")
     path = os.path.join(cwd, now)
-    path = str(path)+'_preview'
+    path = str(path)+'-preview'
     os.mkdir(path)
     os.chdir(path)
     #turn on the lights
