@@ -34,6 +34,7 @@ def capture():
                 now = str(datetime.datetime.now())
                 now = now.replace(":", "")
                 now = now.replace(".", "")
+                now = now.replace(" ", "-")
                 path = os.path.join(cwd, now)
                 os.mkdir(path)
                 os.chdir(path)
